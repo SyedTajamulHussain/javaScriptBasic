@@ -1,4 +1,4 @@
-// JavaScript source code
+// JavaScript source code basics
 console.log("welcome to JavaScript")
 
 /* 
@@ -70,7 +70,7 @@ console.log(firstLetter);
 newStr = "string value is changed"
 console.log(newStr);
 //find last character in string even if you dont know the length of string
-lastletterofFirstName = mylastname[mylastname.length -1];result
+lastletterofFirstName = mylastname[mylastname.length -1];
 console.log(lastletterofFirstName);
 // how to use bracket notation to get the last letter of a string
 lastletterofFirstName = mylastname[mylastname.length -3];
@@ -80,7 +80,7 @@ console.log(lastletterofFirstName);
 function personalDetail(name, address, phoneNumber, status) {
 var result = "";
 result += "Name of the candidate" + " "+ name + " "+ "Address of the candidate " + " "+ address + " "+"Phone # of canidate"+ " "+  phoneNumber + " "+"Status of candidate " + " "+ status;
-return ;
+return result;
 }
 
 
@@ -118,8 +118,34 @@ console.log(multipleDimensionArray);
 var removeFromArray = multipleDimensionArray.shift();
 console.log(removeFromArray);
 console.log(multipleDimensionArray);
-//munipulate arrays with unshift() function 
+//munipulate arrays with unshift() function --  added vaule
+var munipArray = removeFromArray.unshift("TOM");
+console.log(munipArray);
+//Shopping list ..how to create nested arrays
+var nestedArray =[["milk",2],["cereal",1],["bread",3],["butter", 1]];
+//how to call reusable functions in js
+function reusableFuction(){
+	console.log("I am reusable function");
+}
+reusableFuction();
 
+//passing values to function with arguments
+function addition(a,b){
+	console.log(a+b);
+}
+addition(10,5);
+addition(10,10);
 
+//Global scope of function
+
+globalVariable = "I am global variable";
+
+function accessGlobalvariable(){
+	console.log(globalVariable);
+}
+
+accessGlobalvariable();
+
+//local scope and function
 
 
