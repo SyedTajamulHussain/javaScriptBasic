@@ -46,7 +46,7 @@ console.log(difference);
 var multiplication = 8*8;
 console.log(multiplication);
 
-//String concontation
+//String concantation
 
 var concontation = "this is start. " + "this is end"
 console.log(concontation);
@@ -141,6 +141,7 @@ addition(10,10);
 globalVariable = "I am global variable";
 
 function accessGlobalvariable(){
+	var localVariable = "I am local variable ";
 	console.log(globalVariable);
 }
 
@@ -148,4 +149,20 @@ accessGlobalvariable();
 
 //local scope and function
 
+console.log(globalVariable);
+//console.log(localVariable);  //this will throw error as scope is limited only to fuction
 
+//local variable take precedence over global variable if they have same name
+
+var cloth = "t-Shirt";
+
+function outFit(){
+	var cloth = "jeans";
+
+return cloth;
+}
+
+console.log(outFit());
+console.log(cloth); // Printing variable - this will sysout global variable
+
+//return a value from a function with return
