@@ -18,7 +18,7 @@ console.log(myName);
 
 let address = "Shalimar" //only to be used only in scope defined
 
-const pi = 3.14 // this can never change
+const pi = 3.14   //this can never change
 
 //initialize a Variable
 
@@ -166,3 +166,201 @@ console.log(outFit());
 console.log(cloth); // Printing variable - this will sysout global variable
 
 //return a value from a function with return
+
+function minusSeven(num){
+	
+	return num-7;
+}
+
+console.log(minusSeven(10));
+
+function mutiplication(num) {
+	
+	return num *5;
+}
+console.log(mutiplication(10));
+
+//Assignment of returned value.
+
+var result =0;
+
+function add(input) {
+	return input +1;
+
+}
+
+result =add(10);  //Assignment 
+console.log(result);
+
+//Stand in line
+
+var testArray =[1,2,3,4,5,6,7];
+
+function nextInArray(arr ,item){
+	arr.push(item);
+
+return arr.shift();
+}
+
+console.log("Before"  + JSON.stringify(testArray));
+console.log(nextInArray(testArray,8));
+console.log("After",JSON.stringify(testArray));
+
+
+//boolean values
+function boolenconcept(){
+	return true;
+}
+
+//if statements
+
+var isIttrue = false;
+
+function ifStatement(isIttrue) {
+	if(isIttrue) {
+
+	return "yes this is true";
+
+	}
+	return " not this is not true";
+
+}
+console.log(ifStatement(isIttrue));
+
+
+
+
+function whatIsTemperature(maxtemp) { 
+	if(maxtemp == 10) {
+		return "temperature is plesent"
+	}
+	return "temperature is hot"
+}
+console.log(whatIsTemperature(9));
+
+//equals
+
+function testEquals(value){
+	if (value ==10) {
+		return "equal";
+	}
+		return "not equal";
+}
+
+
+console.log(testEquals(10));
+//strict equality operator uses ===
+//not equal
+function notEquals(value){
+	if (value !=10) {
+		return "equal";
+	}
+		return "not equal";
+}
+
+console.log(notEquals(10));
+//logical operator
+//testGreaterThen
+
+function greaterThen(value){
+	if (value > 100) {
+		return "greater then 100";
+	}
+	if(value >50) {
+		return "greater then 50";
+	}
+	return "less then 50 "
+}
+
+console.log(greaterThen(101))
+
+// and operator
+
+function testLogicalOperator(value) {
+if (value <= 50 && value >= 25 ) {
+	return "yes";
+}
+return "No";
+
+}
+console.log(testLogicalOperator(25));
+console.log(testLogicalOperator(24));
+
+//OR operator
+
+function ORLogicalOperator(value) {
+if (value <= 50 || value >= 25 ) {
+	return "yes";
+}
+return "No";
+
+}
+	console.log(ORLogicalOperator(25));
+	console.log(ORLogicalOperator(100));
+
+//Else Statement
+
+function nestedIfStatement(value){
+	var result ="";
+	if(value < 10) {
+		result ="number is less then 10";
+	}
+	if (value > 10) {
+		result = "number is greater then 10";
+	}
+	return result;
+}
+
+	console.log(nestedIfStatement(15));
+
+// better way to write this program is to put else statement
+
+function ifElseStatement(value){
+	var result ="";
+	if(value < 10) {
+		result ="number is less then 10";
+	} 
+		else {
+			result = "number is greater then 10";
+	}
+	return result;
+} 
+
+	console.log(ifElseStatement(8));
+
+	//elseIf statement
+
+	function elseIf (value) { 
+		
+		if (value > 10) {
+			return "greater then 10";
+		}
+		else if (value < 5) {
+			return "less then 10";
+		} else {
+			return "betweenn 5-10"
+		}
+	}
+	console.log(elseIf (11)); 
+
+	//chaining in elseIf statement
+	function chainingElseIf (value) {
+		if (value == "Syed") {
+			return "First Name";
+		}
+		else if (value == "Tajamul") {
+			return "middle Name"
+
+		}
+		else if(value =="hussain"){
+			return  "last Name";
+		}
+		else if (value == "Shalimar" ) {
+			return "address";
+		}
+		else {
+			return "invalid command";
+		}
+	}
+
+	console.log(chainingElseIf("Tjjhjhajamul"));
